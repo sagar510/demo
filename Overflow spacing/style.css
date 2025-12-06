@@ -1,0 +1,23 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    width: 150%;
+}
+
+.box {
+    width: 10%;
+    height: 10vw;
+    background-color: red;
+
+    position: relative;
+    left: 90%;
+    /* left: 126%; */
+    top: 50vh;
+
+    margin-top: -5vw;
+    /* margin-left: -36%; */
+}
+

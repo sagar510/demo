@@ -1,0 +1,96 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.nav {
+    width: 100vw;
+    padding: 4px 0px;
+    background-color: rgb(60, 60, 248);
+    position: fixed;
+    top: 0;
+    z-index: 2;
+}
+
+#login{
+    float: right;
+    color: white;
+    text-decoration: none;
+}
+
+#logo {
+    float: left; 
+    font-size: 40px;
+}
+
+.nav ul{
+    display: inline-block;
+    height: 100%;
+}
+
+.nav ul li {
+    display: inline-block;
+    text-decoration: none;
+}
+
+.nav ul li a {
+    text-decoration: none;
+   
+    width: 100%;
+
+    display: inline-block;
+
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#logo, ul, #login{
+    display: inline-block;
+}
+
+.main{
+    white-space: nowrap;
+    position: relative;
+    transition: right 2s;
+    right: 0%;
+    font-size: 0;
+}
+
+.main div{
+    display: inline-block;
+    width: 25%;
+    background-color: aqua;
+    height: 200px;
+    font-size: 16px;
+
+    /* optional */
+    padding-top: 100px;
+    text-align: center;
+    border: 1px solid black;
+} 
+
+.btns {
+    text-align: center;
+    margin: 20px 0px;
+}
+
+#prev, #next {
+    text-decoration: none;
+    width: 10%;
+    height: 40px;
+    cursor: pointer;
+} 
+
+#chatbot {
+    font-size: 60px;
+    position: fixed;
+    color: rgb(43, 43, 251);
+    right: 10px;
+    bottom: 20px;
+    cursor: pointer;
+}
+
