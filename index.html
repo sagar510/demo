@@ -7,59 +7,33 @@
     <link rel="stylesheet" href="./style.css">
     <script src="https://kit.fontawesome.com/9024b7a2e5.js" crossorigin="anonymous"></script>
     <title>Document</title>
-
-    <style>
-        #left {
-            width: 50%;
-            display: inline-block;
-        }
-
-        #right {
-            width: 50%;
-            display: inline-block;
-        }
-
-        @media (max-width: 900px) {
-            #left {
-                width: 100%;
-            }
-
-            #right {
-                width: 100%;
-            }
-        }
-    </style>
 </head>
 
 <body>
-    <div style="position: fixed; z-index: 2;">
-        <div class="nav">
-            <img id="logo" src="images/Gemini_Generated_Image_n8nyixn8nyixn8ny-removebg-preview.png" alt="logo" />
-            <!-- <i id="logo" class="fa-solid fa-building"></i> -->
-            <ul>
-                <li><a class="active" href="#home">Home</a></li>
-                <li><a href="#clothing">Clothing</a></li>
-                <li><a href="#elect">Electronics</a></li>
-            </ul>
-            <div class="search-container" style="display: inline-block;">
-                <!-- <div id="drop-down">Category ▼
-                    <div id="category-content">
-                        <a href="">Sports</a>
-                        <a href="">Kids</a>
-                        <a href="">Shoes</a>
-                    </div>
-                </div> -->
-                <select id="drop-down">
-                    <option>Category</option>
-                    <option>Sports</option>
-                    <option>Kids</option>
-                    <option>Shoes</option>
-                </select>
-                <input id="search-box" type="text" placeholder="Search...">
-                <div id="search-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
-            </div>
-            <a id="login" href="">Login</a>
+    <!-- <div style="position: fixed; z-index: 2;"> -->
+    <div class="nav">
+        <img id="logo" src="images/Gemini_Generated_Image_n8nyixn8nyixn8ny-removebg-preview.png" alt="logo" />
+        <!-- <i id="logo" class="fa-solid fa-building"></i> -->
+        <ul>
+            <li><a class="active" href="#home">Home</a></li>
+            <li><a href="#clothing">Clothing</a></li>
+            <li><a href="#elect">Electronics</a></li>
+        </ul>
+        <div class="search-container">
+            <select id="drop-down" name="category">
+                <option id="category" name="category" value="category">Category</option>
+                <option id="sports" name="category" value="sports">Sports</option>
+                <option id="kids" name="category" value="kids">Kids</option>
+                <option id="shoes" name="category" value="shoes">Shoes</option>
+            </select>
+            <input id="search-box" type="text" placeholder="Search...">
+            <div id="search-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
         </div>
+        <div id="login-container"><a id="login" href="">Login</a></div>
+        <div id="collapse-bar-logo">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+        <!-- </div> -->
 
         <!-- <div class="search-nav" style="position: fixed; top: 48px;">
             <div class="left" style="float: left; display: inline;">Left</div>
@@ -87,19 +61,28 @@
         <button id="next">></button>
     </div>
 
-     <!-- <div id="parent">
+    <div id="right-collapsed-bar">
+
+    </div>
+
+    <!-- <div id="parent">
         <div id="left">Left</div><div id="right">right</div>
 
     </div> -->
 
-    <div id="clothing" style="height: 100vh; background-color: rgb(233, 228, 228);">
-        <div class="img-container" style="height:417px; width: 626px; position: relative; float: right;">
-            <img style="position: absolute; border: 1px solid rgb(178, 160, 160); object-fit: cover;" src="./images/shopping-happy-young-woman-sunglasses-holding-bags_231208-5614.avif"/>
-            <h1 id="women">WOMEN</h1>
-            <h1 id="fashion">FASHION</h1>
-            <button id="shop-now">Shop Now</button>
-        </div>
+    <div id="clothing" >
+        <!-- <img src="./images/merged.png" alt="main-image"  /> -->
+        <h1 id="women">WOMEN</h1>
+        <h1 id="fashion">FASHION</h1>
+        <button id="shop-now">Shop Now</button>
     </div>
+
+    <!-- <div id="clothing2">
+        <img src="./images/merged.png" alt="main-image" />
+        <h1 id="women">WOMEN</h1>
+        <h1 id="fashion">FASHION</h1>
+        <button id="shop-now">Shop Now</button>
+    </div> -->
 
     <div id="elect" style="height: 100vh; background-color: rgb(252, 239, 239);">
     </div>

@@ -26,6 +26,10 @@ body {
     margin: 15px 30px;
 }
 
+#login-container {
+    display: inline;
+}
+
 #logo {
     float: left; 
     width: 200px;
@@ -38,7 +42,7 @@ body {
 .nav ul{
     display: inline-block;
     height: 100%;
-    margin: 12.5px auto;
+    margin: 12.5px 2%;
 }
 
 .nav ul li {
@@ -86,15 +90,16 @@ li a {
 }
 
 .search-container {
-    width: 400px;
+    display: inline-block;
+    width: 30%;
     height: 40px;
     background-color: white;
-    margin: 8.5px 100px;
+    margin: 8.5px 5%;
 }
 
 #drop-down {
-    height: 100%;
-    width: 100px;
+    height: 40px;
+    width: 80px;
     background-color: yellow;
     text-align: center;
     padding: 8px 0px;
@@ -102,26 +107,6 @@ li a {
     font-weight: 400;
     outline: none;
 }
-
-#drop-down option:hover {
-    background-color: rgb(71, 71, 202);
-}
-
-/* #category-content {
-    display: none;
-    position: absolute;
-    bottom: -90px;
-    background-color: yellow;
-}
-
-#category-content a {
-    display: block;
-    text-decoration: none;
-    width: 100px;
-    height: 30px;
-    color: black;
-    font-weight: bolder;
-}*/
 
 #category-content a:hower {
     font-weight: bolder !important;
@@ -132,7 +117,7 @@ li a {
 }
 
 #search-box {
-    width: 260px;
+    width: 25%;
     height: 100%;
     color: white;
     border: none;
@@ -152,6 +137,21 @@ li a {
 
 #search-icon i {
     font-size: 25px; 
+}
+
+#collapse-bar-logo {
+    float: right;
+    display: none;
+    color: yellow;
+    margin: 15px 30px;
+}
+
+#collapse-bar-logo i {
+    font-size: 30px;
+}
+
+#right-collapsed-bar {
+    
 }
 
 .main{
@@ -206,25 +206,32 @@ li a {
     cursor: pointer;
 }
 
+#clothing {
+    height: 500px; 
+    background-color: #fedf44;
+    background-image: url(./images/merged.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding-top: 50px;
+}
+
 #women, #fashion {
-    position: absolute;
-    top: 70px;
+    text-align: center;
+    margin-bottom: 100px;
 }
 
 #women {
-    left: 8px;
     color: white;
 }
 
-#fashion {
-    right: 80px;
+#fashion { 
     color: rgb(60, 60, 248);
 }
 
 #shop-now{
-    position: absolute;
-    left: 8px;
-    top: 300px;
+    margin: 0px auto;
+    display: block;
     border: none;
     text-decoration: none;
     cursor: pointer;
@@ -234,27 +241,56 @@ li a {
     color: white;
 }
 
+.top-deals {
+    background-color: yellow;
+    width: 15vw;
+    height: 600px;
+    float: left;
+}
 
-@media (max-width: 1190px) {
-    body {
-        padding-top: 117px;
+
+/* Media queries for Nav Bar */ 
+
+@media (max-width: 1055px) {
+    #collapse-bar {
+        display: block;
+    }
+    #login-container {
+        display: none;
+    }
+    .nav ul{
+        display: none;
+    }
+
+    .search-container{
+        width: 43%;
     }
 }
 
-@media (max-width: 1090px) {
-    body {
-        padding-top: 112px;
+@media (max-width: 640px) {
+    .search-container{
+        display: none;
     }
 }
 
-@media (max-width: 900px) {
-    body {
-        padding-top: 163px;
+
+
+/* Media query for sliders : */
+
+@media (max-width: 509px) {  /* 1 boxes inside */
+    .main div{
+        width: 100%;    /* taken 1/1 */
     }
 }
 
-@media (min-width: 700px) and (max-width: 800px) {
-    body {
-        padding-top: 115px;
+@media (max-width: 763.5px) {  /* 3 boxes inside */
+    .main div{
+        width: 50%;    /* taken 1/2 */
+    }
+}
+
+@media (max-width: 1272.5px) {  /* 5 boxes inside */
+    .main div{
+        width: 34%;    /* taken 1/3 */
     }
 }
