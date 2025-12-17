@@ -65,7 +65,7 @@ body {
     display: inline;
 }
 
-li {
+.nav ul li {
     text-align: center;
 }
 
@@ -74,12 +74,12 @@ li {
     color: white !important;
 }
 
-li a:hover {
+.nav ul li a:hover {
     border-bottom: 5px solid yellow;
     color: white;
 }
 
-li a {
+.nav ul li a {
     color: yellow;
 }
 
@@ -144,14 +144,40 @@ li a {
     display: none;
     color: yellow;
     margin: 15px 30px;
+    cursor: pointer;
 }
 
 #collapse-bar-logo i {
     font-size: 30px;
 }
 
+#collapse-close {
+    cursor: pointer;
+    font-size: 40px;
+    text-align: right;
+    color: #fedf44;
+}
+
 #right-collapsed-bar {
-    
+    top: 0;
+    right: 0;
+    z-index: 9999;
+    position: fixed;
+    height: 100%;
+    width: 400px;
+    background-color: rgb(60, 60, 248);
+    padding: 40px;
+    display: none;
+}
+
+#right-collapsed-bar ul li {
+    list-style: none;
+    margin: 20px 0px;
+}
+
+#right-collapsed-bar ul li a {
+    text-decoration: none;
+    color: white;
 }
 
 .main{
@@ -241,6 +267,18 @@ li a {
     color: white;
 }
 
+#collpse-login{
+    margin: 0px auto;
+    display: block;
+    border: none;
+    text-decoration: none;
+    cursor: pointer;
+    height: 40px;
+    width: 135px;
+    background-color: yellow;
+    color: black;
+}
+
 .top-deals {
     background-color: yellow;
     width: 15vw;
@@ -252,7 +290,7 @@ li a {
 /* Media queries for Nav Bar */ 
 
 @media (max-width: 1055px) {
-    #collapse-bar {
+    #collapse-bar-logo {
         display: block;
     }
     #login-container {

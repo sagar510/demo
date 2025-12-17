@@ -76,3 +76,13 @@ var x = window.matchMedia("(max-width: 1272.5px)");
 x.addEventListener("change", function() {
   changeslider(x, 34, 150);
 });
+
+
+const collapsedbar = document.getElementById("right-collapsed-bar").style;
+document.getElementById("collapse-bar-logo").addEventListener("click", function(){
+    collapsedbar.display = 'block';
+});
+document.getElementById("collapse-close").addEventListener("click", function(){
+    collapsedbar.display = 'none';
+});
+
