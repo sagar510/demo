@@ -78,11 +78,18 @@ x.addEventListener("change", function() {
 });
 
 
-const collapsedbar = document.getElementById("right-collapsed-bar").style;
+const collapsedbar = document.getElementById("right-collapsed-bar");
 document.getElementById("collapse-bar-logo").addEventListener("click", function(){
-    collapsedbar.display = 'block';
+    collapsedbar.style.display = 'block';
 });
 document.getElementById("collapse-close").addEventListener("click", function(){
-    collapsedbar.display = 'none';
+    collapsedbar.style.display = 'none';
 });
+
+const lis = collapsedbar.children;
+for(let i=0; i<lis.length; i++) {
+    lis[i].addEventListener("click", function(){
+        collapsedbar.style.display = 'none';
+    });
+}
 
