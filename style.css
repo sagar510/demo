@@ -7,7 +7,7 @@
 
 body {
     overflow-x: hidden;
-    padding-top: 65px;
+    padding-top: 57px;
 }
 
 .nav {
@@ -17,6 +17,7 @@ body {
     position: fixed;
     top: 0;
     z-index: 3;
+    height: 57px;
 }
 
 .slide-img-container {
@@ -52,7 +53,7 @@ body {
 .nav ul{
     display: inline-block;
     height: 100%;
-    margin: 12.5px 2%;
+    margin: 8.5px 2%;
 }
 
 .nav ul li {
@@ -104,7 +105,7 @@ body {
     width: 30%;
     height: 40px;
     background-color: white;
-    margin: 8.5px 5%;
+    margin: 4.5px 5%;
 }
 
 #drop-down {
@@ -206,9 +207,9 @@ body {
     font-size: 16px;
 
     /* optional */
-    padding: 10px;
+    /* padding: 10px; */
     text-align: center;
-    border: 1px solid black;
+    border-bottom: 1px solid grey;
 } 
 
 #prev, #next {
