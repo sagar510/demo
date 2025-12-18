@@ -67,12 +67,12 @@ z.addEventListener("change", function() {
   changeslider(z, 100, 700);
 });
 
-var y = window.matchMedia("(max-width: 763.5px)");
+var y = window.matchMedia("(max-width: 763.5px) and (min-width: 509.01px)");
 y.addEventListener("change", function() {
   changeslider(y, 50, 300);
 });
 
-var x = window.matchMedia("(max-width: 1272.5px)");
+var x = window.matchMedia("(max-width: 1272.5px) and (min-width: 763.51px)");
 x.addEventListener("change", function() {
   changeslider(x, 34, 150);
 });

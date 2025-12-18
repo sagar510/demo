@@ -315,19 +315,19 @@ body {
 
 /* Media query for sliders : */
 
-@media (max-width: 509px) {  /* 1 boxes inside */
+@media (max-width: 509px) and (min-width: 0px) {  /* 1 boxes inside */
     .main div{
         width: 100%;    /* taken 1/1 */
     }
 }
 
-@media (max-width: 763.5px) {  /* 3 boxes inside */
+@media (max-width: 763.5px) and (min-width: 509.01px) {  /* 3 boxes inside */
     .main div{
         width: 50%;    /* taken 1/2 */
     }
 }
 
-@media (max-width: 1272.5px) {  /* 5 boxes inside */
+@media (max-width: 1272.5px) and (min-width: 763.51px) {  /* 5 boxes inside */
     .main div{
         width: 34%;    /* taken 1/3 */
     }
