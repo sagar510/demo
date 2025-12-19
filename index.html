@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
     <script src="https://kit.fontawesome.com/9024b7a2e5.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
     <title>Document</title>
 </head>
 
@@ -48,7 +51,8 @@
 
     <div id="home" style="position: relative;">
         <div class="main">
-            <div class="slide-img-container"><img src="./images/sliders/20b1822720e11aad.webp" alt="slider image 1"></div>
+            <div class="slide-img-container"><img src="./images/sliders/20b1822720e11aad.webp" alt="slider image 1">
+            </div>
             <div><img src="./images/sliders/49ebcb61294a66b1.webp" alt="slider image 1"></div>
             <div><img src="./images/sliders/6cffa3fff32ba438.webp" alt="slider image 1"></div>
             <div><img src="./images/sliders/76b00ca7f79b8c25.webp" alt="slider image 1"></div>
@@ -76,7 +80,7 @@
 
     </div> -->
 
-    <div id="clothing" >
+    <div id="clothing">
         <!-- <img src="./images/merged.png" alt="main-image"  /> -->
         <h1 id="women">WOMEN</h1>
         <h1 id="fashion">FASHION</h1>
@@ -90,10 +94,148 @@
         <button id="shop-now">Shop Now</button>
     </div> -->
 
-    <div id="elect" style="height: 100vh; background-color: rgb(252, 239, 239);">
+    <div id="elect" class="container-fluid py-5" style="background-color: white; min-height: 100vh;">
+
+        <!-- Section Heading -->
+        <div class="container mb-4">
+            <h1 class="fw-bold">Fashion's Top Deal</h1>
+            <p class="text-muted">9 Items</p>
+        </div>
+
+        <!-- Cards -->
+        <div class="container">
+            <div class="row g-4" id="ecomCardContainer">
+                <!-- Card 1 -->
+            </div>
+        </div>
     </div>
 
+
     <i id="chatbot" class="fa-brands fa-whatsapp"></i>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+
+    <script>
+
+        const products = [
+            {
+                id: 1,
+                name: "Women Flip Flops",
+                category: "Footwear",
+                price: 799,
+                discount: 50,
+                image: "./images/product-cards/-original-imahftsfy8hg5sg6.webp"
+            },
+            {
+                id: 2,
+                name: "Wrist Watches",
+                category: "Footwear",
+                price: 1299,
+                discount: 40,
+                image: "./images/product-cards/1-1221-vilante-boys-girls-original-imahgd8jv9zcgtxg.webp"
+            },
+            {
+                id: 3,
+                name: "Men's Sport's Shoes",
+                category: "Footwear",
+                price: 1999,
+                discount: 30,
+                image: "./images/product-cards/6-biss-2031-blu-wht-40-bruton-blue-original-imahczyufwkmpeyq.webp"
+            },
+            {
+                id: 4,
+                name: "Men's Casual Shoes",
+                category: "Kids",
+                price: 1499,
+                discount: 35,
+                image: "./images/product-cards/7-sneaker-7-echor-white-blue-original-imahf9ps8wwbzfyv.webp"
+            },
+            {
+                id: 5,
+                name: "Men's Flip Flop",
+                category: "Kids",
+                price: 1499,
+                discount: 35,
+                image: "./images/product-cards/8-eagle-f-b-black-06-cloker-black-original-imahgphm8hznjvdg.webp"
+            },
+            {
+                id: 6,
+                name: "Travel Bags",
+                category: "Kids",
+                price: 1499,
+                discount: 35,
+                image: "./images/product-cards/53-travel-for-outdoor-sport-hikiing-bag-30-smartlook-75-26-5-original-imahgz6mgjg6uqs4.webp"
+            },
+            {
+                id: 7,
+                name: "Men's and Women's Socks",
+                category: "Kids",
+                price: 1499,
+                discount: 35,
+                image: "./images/product-cards/free-5-swg-365-51-swagr-original-imaggmtcyd4gcbqv.webp"
+            },
+            {
+                id: 8,
+                name: "Women's Ethnic Sets",
+                category: "Kids",
+                price: 1499,
+                discount: 35,
+                image: "./images/product-cards/m-sabari-suit-dv-divastri-original-imahfykw9emjj5ch.webp"
+            },
+            {
+                id: 9,
+                name: "Men's Jackets",
+                category: "Kids",
+                price: 1499,
+                discount: 35,
+                image: "./images/product-cards/xl-1-no-mt2-jkt-arrow-print-ice-blue-white-motrex-original-imahgnjm9qmkzfwz.webp"
+            }
+        ];
+
+
+
+
+        $(products).each(function (ind, value) {
+            var imgurl = value.image;
+            var productname = value.name;
+            var discount = value.discount;
+
+            $('#ecomCardContainer').append(' <div class="col-sm-6 col-md-4 col-lg-3 col-12">' +
+                '<div class="card h-100 text-center">' +
+                '<img src="'+imgurl+'" class="card-img-top p-3"' +
+                'alt="Women Flip Flops">' +
+                '<div class="card-body">' +
+                "<h6 class='card-title'>"+productname+"</h6>" +
+                '<p class="text-success fw-bold mb-2">Min. '+discount+'% Off</p>' +
+                '<button class="btn btn-outline-dark btn-sm view-product-button">View Product</button>' +
+                '</div>' +
+                '</div>' +
+                '</div>'
+            )
+        })
+
+        function createAlert(element){
+            productname = element.parentElement.firstChild.textContent;
+            alert(productname);
+        }
+
+        // document.getElementById('button').addEventListener("click", function(){
+        //     alert('button clicked');
+        //     console.log(this);
+        // });
+
+        // btns = document.querySelector('.view-product');
+        // for(let i=0; i<btns.length; i++){
+
+        //     btn = btns[i];
+
+        // btn.addEventListener("click", function(){
+        //     const productname = btn.parentElement.firstChild.textContent;
+        //     alert(productname);
+        // });
+        // }
+
+    </script>
 
     <script src="./script.js"></script>
 </body>

@@ -8,7 +8,7 @@
 body {
     overflow-x: hidden;
     padding-top: 80px;
-    background-color: #fedf44;
+    /* background-color: #fedf44; */
 }
 
 .nav {
@@ -298,6 +298,45 @@ body {
     float: left;
 }
 
+#elect h1 {
+    text-align: center;
+    margin: 60px 20px  0px;
+}
+
+#elect > p {
+    text-align: center;
+    margin: 20px 0px;
+    color: gray;
+}
+
+#elect {
+    /* padding: 20px; */
+}
+
+.cards-container {
+    display: flex;
+    gap: 30px;
+}
+
+.cards-container .card {
+    width: 200px;
+    height: 300px;
+    padding: 10px;
+    border: 1px solid lightgrey;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.cards-container .card img {
+    width: 100%;
+    height: 80%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.cards-container .card p {
+    color: gray;
+}
 
 /* Media queries for Nav Bar */ 
 
